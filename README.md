@@ -1,5 +1,58 @@
 # Arduino Memory Game
-- A memory game using the arduino microcontroller.
-- Players must watch the LED sequence and repeat it by pressing the matching buttons.
+- A memory game using the Arduino microcontroller, LEDs, buttons, and a buzzer.
+- Players must watch the LED sequence and repeat it by pressing the matching buttons. Each round adds a new step to the sequence.
 
 ## Demo and Links
+
+## Overview
+This is my first project with arduino. what this project does
+
+why you built it
+
+## Hardware Components
+- Arduino Microcontroller
+- 4 LEDs
+- 4 push buttons
+- 4 resistors (220Ω)
+- Piezo buzzer
+- Breadboard
+- Jumper wires
+
+### Circuit Diagram
+![Wiring diagram for memory game](assets/WireDiagram.png)
+
+## How it works - probably go in overview at high level and below more low level 
+1. arduino generates random sequence of led signals
+2. seqence then played w light and sound
+3. player repeats by clicking corresponding btn
+4. arduino checks input against correct sequence
+5. if correct, next round and sequence increases
+6. if incorrect game ends and resets 
+
+- high level - "This project was built as my first hands-on embedded systems project to learn Arduino programming and hardware interaction."
+- Buttons use the Arduino's internal pull-up resistors to simplify the circuit and reduce the number of external components.
+
+### Code Structure
+- Helper methods:
+- - setup()
+basically list all methods
+
+## Skills Learned/Improved
+microcontroller and electronics basics (LEDs, buzzer, resistor)
+circuit design
+digital input/output on microcontrollers - integrating hardware and software systems
+writing code for modular functions and utilizing them
+handling user input with hardware buttons
+basic embedded systems programming (C++)
+
+## Future Improvements
+- Add a OLED display for level and score
+- Build 3d printed enclosure 
+- make a leaderboard
+
+## Setup Instructions
+1. Follow circuit diagram to set up LEDs, resistors, button, buzzer, and wires 
+2. Connect LEDs to pins 7-10.
+3. Conncet buttons to pins 2-5.
+4. Connect buzzer to pin 12
+5. Upload Arduino sketch and power board
