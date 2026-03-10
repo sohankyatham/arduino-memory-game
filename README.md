@@ -2,8 +2,6 @@
 - A memory game using the Arduino microcontroller, LEDs, buttons, and a piezo buzzer.
 - Players must watch the LED sequence and repeat it by pressing the matching buttons. Each round adds a new step to the sequence.
 
-<img src="assets/UsingTheMemoryGame.jpeg.png" alt="User playing the Arduino memory game" width="300"/>
-
 ## Demo Link
 https://youtube.com/shorts/1UGmg3GiB4w?feature=share
 
@@ -25,7 +23,7 @@ This is my first project using an Arduino microcontroller and it allowed me to l
 <img src="assets/WireDiagram.png" alt="Wiring diagram for memory game" width="500"/>
 
 ## Setup Instructions
-1. Follow circuit diagram to set up LEDs, resistors, button, buzzer, and wires 
+1. Follow circuit diagram to set up LEDs, resistors, buttons, buzzer, and wires 
 2. Connect LEDs to pins 7-10.
 3. Connect buttons to pins 2-5.
 4. Connect buzzer to pin 12
@@ -44,13 +42,13 @@ This is my first project using an Arduino microcontroller and it allowed me to l
 - loop() - main game loop and heart of the program's logic
 
 - Helper methods:
-- - flashButtonSignal() - Turn on LED and play its note 
-- - playSequence() - Show the current memory pattern on the Arduino
-- - getButtonPress() - Check if the user presses a button and return the button pressed
-- - isPlayerCorrect() - Check whether the player pressed the correct button(s) for the round
-- - playFailSound() - Play the game over sound when the player clicks the incorrect button sequence
-- - playWinSound() - Play the win sound when the player clicks the correct button(s) for the sequence
-- - gameOver() - Tells the user their score in the serial output
+  - flashButtonSignal() - Turn on LED and play its note 
+  - playSequence() - Show the current memory pattern on the Arduino
+  - getButtonPress() - Check if the user presses a button and return the button pressed
+  - isPlayerCorrect() - Check whether the player pressed the correct button(s) for the round
+  - playFailSound() - Play the game over sound when the player clicks the incorrect button sequence
+  - playWinSound() - Play the win sound when the player clicks the correct button(s) for the sequence
+  - gameOver() - Tells the user their score in the serial output
 
 ## Skills Learned/Improved
 - Fundamentals of digital input/output with Arduino microcontrollers 
