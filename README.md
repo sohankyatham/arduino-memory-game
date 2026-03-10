@@ -1,13 +1,14 @@
 # Arduino Memory Game
-- A memory game using the Arduino microcontroller, LEDs, buttons, and a buzzer.
+- A memory game using the Arduino microcontroller, LEDs, buttons, and a piezo buzzer.
 - Players must watch the LED sequence and repeat it by pressing the matching buttons. Each round adds a new step to the sequence.
 
 ## Demo and Links
+https://youtube.com/shorts/1UGmg3GiB4w?feature=share
 
 ## Overview
-This is my first project with arduino. what this project does
+This project is a LED memory game built using an Arduino. The system generates a random sequence of LEDs and tones which the user must memorize and repeat by pressing the corresponding buttons. If the user enters the correct sequence for the round, then the next round the length of the sequence increases, making it more challenging for the user. If the user enters an incorrect sequence, then the game tells the user their score in the Serial output and restarts the game.
 
-why you built it
+This is my first project using an Arduino and it allowed me to learn the fundamentals of embedded systems programming, including digital input/output, circuit/code design, and integrating hardware components.
 
 ## Hardware Components
 - Arduino Microcontroller
@@ -21,6 +22,9 @@ why you built it
 ### Circuit Diagram
 ![Wiring diagram for memory game](assets/WireDiagram.png)
 
+- This is the HTML tag version for image embedded:
+<img src="assets/WireDiagram.png" alt="Alt text" width="300"/>
+
 ## How it works - probably go in overview at high level and below more low level 
 1. arduino generates random sequence of led signals
 2. seqence then played w light and sound
@@ -33,8 +37,17 @@ why you built it
 - Buttons use the Arduino's internal pull-up resistors to simplify the circuit and reduce the number of external components.
 
 ### Code Structure
+- setup() - initializes hardware (LED pins & buzzer are outputs; button pins are input)
+- loop() - main game loop and heart of the program's logic
+
 - Helper methods:
-- - setup()
+- - flashButtonSignal() - Turn on LED and play its note 
+- - playSequence() - Show the current memory pattern on the Arduino
+- - getButtonPress() - Check if the user presses a button and return the button pressed
+- - isPlayerCorrect() - Check whether the player pressed the correct button(s) for the round
+- - playFailSound() - Play the game over sound when the player clicks the incorrect button sequence
+- - playWinSound() - Play the win sound when the player clicks the correct button(s) for the sequence
+- - gameOver() - Tells the user their score in the serial output
 basically list all methods
 
 ## Skills Learned/Improved
