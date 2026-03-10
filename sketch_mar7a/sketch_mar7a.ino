@@ -40,7 +40,7 @@ void setup() {
 }
 
 /**
-   Lights the given LED and plays a suitable tone
+    Lights the given LED and plays a suitable tone
 */
 void lightLedAndPlayTone(byte ledIndex) {
   digitalWrite(ledPins[ledIndex], HIGH);
