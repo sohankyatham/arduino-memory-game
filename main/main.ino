@@ -41,7 +41,7 @@ void setup() {
 void flashButtonSignal(byte index) {
     digitalWrite(LED_PINS[index], HIGH);
     tone(BUZZER_PIN, NOTE_VALUES[index]);
-    delay(100);
+    delay(200);
     digitalWrite(LED_PINS[index], LOW);
     noTone(BUZZER_PIN);
     delay(50);
@@ -162,6 +162,7 @@ void loop() {
         playFailSound();
         gameOver();
         currentLevel = 0; // reset game
+        delay(1000);
     }
 
     delay(800);
